@@ -1,16 +1,13 @@
-import { Canvas } from "@react-three/fiber";
-import {OrbitControls} from "@react-three/drei";
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import Trampoline from './Trampoline.tsx'
 
 export default function App() {
-    return (
-        <Canvas>
-            <OrbitControls />
-            <mesh>
-                <boxGeometry args={[2, 2, 2]} />
-                <meshPhongMaterial />
-            </mesh>
-            <ambientLight intensity={0.1} />
-            <directionalLight position={[0, 0, 5]} color="red" />
-        </Canvas>
-    );
+  return (
+    <Canvas>
+      <OrbitControls />
+      <Trampoline />
+      <ambientLight intensity={0.1} />
+    </Canvas>
+  )
 }
